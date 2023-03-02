@@ -24,19 +24,23 @@ const s1=parseFloat(prompt("Введите цену первого товара"
 const s2=parseFloat(prompt("Введите цену второго товара", ""));
 const procent=parseFloat(prompt("Введите скидку", ""));
 if(s1>0 && s2>0 && procent>0 && procent<6){
-let os=s1+s2;
-let sk=(os/100)*procent;
-let sm=os-sk;
+let os=s1+s2;             // Сумма
+let sk=(os/100)*procent;  // Скидка
+let sm=os-sk;             // Сумма со учетом скидки
  
 document.write('ООО "Евроторг" ');
+
 document.write('<p style="text-align:top;font-size:19px;margin-left:10px;margin-top:0;margin-bottom:0;"><b>СПАСИБО ЗА ПОКУПКУ!</b></p>');
+
 document.write('<p style="text-align:top;margin-top:0;">Дата покупки: ',date.toLocaleString());
 
 document.write('<p style="text-align:top;margin-top:0;margin-bottom:0;">Наименование товара</p>');
-document.write(n,"  =",s1.toFixed(2));//надо больше пробелов
+
+document.write("<pre>",n,"=                       ",s1.toFixed(2),"</pre>");  // Цена 1-го товара 
 
 document.write('<p style="text-align:top;margin-top:0;margi-bottom:0;">Наименование товара</p>');
-document.write(n,"  =",s2.toFixed(2));//надо больше пробелов
+
+document.write("<pre>",n,"=                       ",s2.toFixed(2),"</pre>");  // Цена 2-го товара
 
 document.write('<p style="text-align:top;font-size:19px;margin-left:0px;margin-top:10;margin-bottom:0;"><b>ИТОГО</b></p>');
     
